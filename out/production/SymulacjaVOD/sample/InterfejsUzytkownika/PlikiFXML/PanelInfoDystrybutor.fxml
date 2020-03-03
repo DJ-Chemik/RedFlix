@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.InterfejsUzytkownika.PanelInfoDystrybutorController">
+   <top>
+      <Pane prefHeight="100.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView>
+               <image>
+                  <Image url="@../../Zdjecia/Belka.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="80.0" fitWidth="400.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#openPanelGlowny" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Zdjecia/logo4.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="525.0" layoutY="36.0" text="Panel Informacji o Dystrybutorze">
+               <font>
+                  <Font name="qtquickcontrols" size="27.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.21666666666666667" centerY="0.40476190476190477" radius="1.0">
+                     <stops>
+                        <Stop color="#ff1a1a" />
+                        <Stop color="#1b0707" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <left>
+      <Pane prefHeight="520.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView>
+               <image>
+                  <Image url="@../../Zdjecia/TLO.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="20.0" layoutY="520.0" mnemonicParsing="false" onMouseClicked="#openPanelListyLudzi" prefHeight="80.0" prefWidth="280.0" text="&lt;-- Powrót do Panelu Listy Użytkowników" />
+            <Label layoutX="416.0" layoutY="98.0" text="Nazwa" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="270.0" layoutY="143.0" text="nr Konta" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="288.0" layoutY="193.0" text="Kwota stała za odtworzenie" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="282.0" layoutY="240.0" text="Kwota ryczałtu miesięcznego" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField disable="true" layoutX="506.0" layoutY="98.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField disable="true" layoutX="506.0" layoutY="193.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField disable="true" layoutX="506.0" layoutY="240.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField disable="true" layoutX="345.0" layoutY="143.0" prefHeight="25.0" prefWidth="30.0" />
+            <TextField disable="true" layoutX="384.0" layoutY="143.0" prefHeight="25.0" prefWidth="45.0" />
+            <TextField disable="true" layoutX="661.0" layoutY="143.0" prefHeight="25.0" prefWidth="45.0" />
+            <TextField disable="true" layoutX="548.0" layoutY="143.0" prefHeight="25.0" prefWidth="45.0" />
+            <TextField disable="true" layoutX="606.0" layoutY="143.0" prefHeight="25.0" prefWidth="45.0" />
+            <TextField disable="true" layoutX="493.0" layoutY="143.0" prefHeight="25.0" prefWidth="45.0" />
+            <TextField disable="true" layoutX="441.0" layoutY="143.0" prefHeight="25.0" prefWidth="45.0" />
+            <ToggleButton layoutX="758.0" layoutY="90.0" mnemonicParsing="false" text="Odblokuj Pola Tekstowe,&#10;aby móc edytować informacje o dystrybutorze" textAlignment="CENTER" />
+         </children></Pane>
+   </left>
+</BorderPane>

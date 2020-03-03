@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.InterfejsUzytkownika.PanelWyboruAktorowController">
+   <top>
+      <Pane prefHeight="100.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView>
+               <image>
+                  <Image url="@../../Zdjecia/Belka.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="80.0" fitWidth="400.0" layoutX="100.0" layoutY="10.0" onMouseClicked="#openPanelGlowny" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Zdjecia/logo4.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="504.0" layoutY="36.0" text="Panel Wyboru Aktorów">
+               <font>
+                  <Font name="qtquickcontrols" size="27.0" />
+               </font>
+               <textFill>
+                  <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0" startX="0.08571428571428572" startY="0.37142857142857144">
+                     <stops>
+                        <Stop color="RED" />
+                        <Stop color="WHITE" offset="0.9965635738831614" />
+                        <Stop color="#ffffff00" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <Pane prefHeight="620.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView>
+               <image>
+                  <Image url="@../../Zdjecia/TLO.png" />
+               </image>
+            </ImageView>
+            <ImageView visible="false">
+               <image>
+                  <Image url="@../../Zdjecia/blackTlo.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="20.0" layoutY="520.0" mnemonicParsing="false" onAction="#openPanelDodawaniaProdukcji" opacity="0.85" prefHeight="80.0" prefWidth="280.0" text="&lt;-- Powrót do Panelu Dodawania Produkcji" />
+            <ListView fx:id="listaAktorow" layoutX="320.0" layoutY="20.0" opacity="0.85" prefHeight="580.0" prefWidth="630.0" />
+            <Button layoutX="973.0" layoutY="125.0" mnemonicParsing="false" onMouseClicked="#dodajAktoraDoProdukcji" opacity="0.85" prefHeight="140.0" prefWidth="280.0" text="Dodaj Wybranego &#10;Aktora &#10;Do Danej Produkcji" textAlignment="CENTER" />
+            <Label layoutX="22.0" layoutY="69.0" text="W tym panelu dodajesz &#10;aktorów którzy mają być widoczni &#10;w danej produkcji.&#10;&#10;Jeśli dodasz złego aktora, możesz &#10;go usunać w Panelu Dodawania Produkcji" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SymulacjaVOD:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SymulacjaVOD_jar</output-path>
+    <root id="archive" name="SymulacjaVOD.jar">
+      <element id="module-output" name="SymulacjaVOD" />
+    </root>
+  </artifact>
+</component>

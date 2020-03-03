@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.InterfejsUzytkownika.PanelGlownyController">
+   <center>
+      <Pane>
+         <children>
+            <ImageView>
+               <image>
+                  <Image url="@../../Zdjecia/szareTlo.png" />
+               </image>
+            </ImageView>
+            <BorderPane fx:id="borderPaneMenuGlownego" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0">
+               <top>
+                  <VBox prefHeight="201.0" prefWidth="1080.0" BorderPane.alignment="TOP_CENTER">
+                     <children>
+                        <HBox prefHeight="203.0" prefWidth="1080.0">
+                           <children>
+                              <ImageView fitHeight="157.0" fitWidth="561.0" onMouseClicked="#openPanelGlowny" pickOnBounds="true" smooth="false">
+                                 <image>
+                                    <Image url="@../../Zdjecia/logo4.png" />
+                                 </image>
+                              </ImageView>
+                              <HBox prefHeight="157.0" prefWidth="251.0">
+                                 <children>
+                                    <VBox />
+                                 </children>
+                              </HBox>
+                              <Button fx:id="panelAdministratoraButton" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#openPanelAdministratora" prefHeight="110.0" prefWidth="218.0" text="Panel &#10;Administratora&#10;" textAlignment="CENTER">
+                                 <HBox.margin>
+                                    <Insets top="30.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="qtquickcontrols" size="27.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0" startX="0.34285714285714286" startY="0.8238095238095238">
+                                       <stops>
+                                          <Stop color="RED" />
+                                          <Stop color="BLACK" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="159.0" prefWidth="1080.0">
+                           <children>
+                              <TextField fx:id="szukajTextField" prefHeight="44.0" prefWidth="499.0" />
+                              <Button fx:id="szukajButton" mnemonicParsing="false" onAction="#szukajProdukcji" prefHeight="46.0" prefWidth="63.0" text="Szukaj" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </top>
+               <left>
+                  <Pane prefHeight="519.0" prefWidth="202.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ComboBox fx:id="comboBoxWyborTypuProdukcji" focusTraversable="false" layoutX="7.0" layoutY="2.0" onAction="#wybranieTypuProdukcjiZComboBoxa" prefHeight="25.0" prefWidth="189.0" promptText="Typ produkcji.." />
+                        <VBox layoutX="7.0" layoutY="35.0" prefHeight="180.0" prefWidth="188.0">
+                           <children>
+                              <CheckBox fx:id="checkAkcja" mnemonicParsing="false" onAction="#zawezWynikiGatunek" prefHeight="29.0" prefWidth="188.0" selected="true" text="Akcja" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="checkKomedia" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#zawezWynikiGatunek" prefHeight="29.0" prefWidth="188.0" selected="true" text="Komedia" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="checkSensacyjny" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#zawezWynikiGatunek" prefHeight="29.0" prefWidth="188.0" selected="true" text="Sensacyjny" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="checkDramat" layoutX="10.0" layoutY="39.0" mnemonicParsing="false" onAction="#zawezWynikiGatunek" prefHeight="29.0" prefWidth="188.0" selected="true" text="Dramat" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="checkDokumentalny" layoutX="10.0" layoutY="97.0" mnemonicParsing="false" onAction="#zawezWynikiGatunek" prefHeight="29.0" prefWidth="188.0" selected="true" text="Dokumentalny" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="checkDlaDzieci" layoutX="10.0" layoutY="126.0" mnemonicParsing="false" onAction="#zawezWynikiGatunek" prefHeight="29.0" prefWidth="188.0" selected="true" text="Dla Dzieci" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </left>
+               <padding>
+                  <Insets left="100.0" right="100.0" />
+               </padding>
+               <bottom>
+                  <Pane prefHeight="46.0" prefWidth="1080.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button layoutX="208.0" layoutY="8.0" mnemonicParsing="false" onAction="#poprzedniaStrona" prefHeight="30.0" prefWidth="200.0" text="Poprzednia" />
+                        <Button layoutX="866.0" layoutY="8.0" mnemonicParsing="false" onAction="#nastepnaStrona" prefHeight="30.0" prefWidth="200.0" text="Następna" />
+                        <Label layoutX="492.0" layoutY="11.0" prefHeight="17.0" prefWidth="84.0" text="Strona nr:" textAlignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textNumerStrony" layoutX="576.0" layoutY="11.0" onAction="#onEnter" onMouseEntered="#wyczyscTextNumerStrony" onMouseExited="#przywrocTextNumerStrony" prefHeight="25.0" prefWidth="55.0" />
+                        <Label layoutX="643.0" layoutY="11.0" prefHeight="25.0" prefWidth="11.0" text="/" textAlignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="textMaxStron" layoutX="662.0" layoutY="11.0" prefHeight="25.0" prefWidth="11.0" text="2" textAlignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </bottom>
+               <center>
+                  <GridPane BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fx:id="image1" fitHeight="125.0" fitWidth="220.0" onMouseClicked="#openPanelInformacyjny1" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Zdjecia/tytul1.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="labelTytul1" alignment="CENTER" onMouseClicked="#openPanelInformacyjny1" prefHeight="154.0" prefWidth="220.0" text="Tytuł 1" wrapText="true">
+                                 <font>
+                                    <Font name="Rockwell" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView fx:id="image5" fitHeight="125.0" fitWidth="220.0" onMouseClicked="#openPanelInformacyjny5" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Zdjecia/tytul2.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="labelTytul5" alignment="CENTER" onMouseClicked="#openPanelInformacyjny5" prefHeight="154.0" prefWidth="220.0" text="Tytuł 5" wrapText="true">
+                                 <font>
+                                    <Font name="Rockwell" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView fx:id="image9" fitHeight="125.0" fitWidth="220.0" onMouseClicked="#openPanelInformacyjny9" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Zdjecia/tytul3.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="labelTytul9" alignment="CENTER" onMouseClicked="#openPanelInformacyjny9" prefHeight="154.0" prefWidth="220.0" text="Tytuł 9" wrapText="true">
+                                 <font>
+                                    <Font name="Rockwell" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                           <children>
+                              <ImageView fx:id="image2" fitHeight="125.0" fitWidth="220.0" onMouseClicked="#openPanelInformacyjny2" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Zdjecia/q23.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="labelTytul2" alignment="CENTER" onMouseClicked="#openPanelInformacyjny2" prefHeight="154.0" prefWidth="220.0" text="Tytuł 2" wrapText="true">
+                                 <font>
+                                    <Font name="Rockwell" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView fx:id="image6" fitHeight="125.0" fitWidth="220.0" onMouseClicked="#openPanelInformacyjny6" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Zdjecia/tytul5.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="labelTytul6" alignment="CENTER" onMouseClicked="#openPanelInformacyjny6" prefHeight="154.0" prefWidth="220.0" text="Tytuł 6" wrapText="true">
+                                 <font>
+                                    <Font name="Rockwell" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView fx:id="image10" fitHeight="125.0" fitWidth="220.0" onMouseClicked="#openPanelInformacyjny10" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Zdjecia/tytul6.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="labelTytul10" alignment="CENTER" onMouseClicked="#openPanelInformacyjny10" prefHeight="154.0" prefWidth="220.0" text="Tytuł 10" wrapText="true">
+                                 <font>
+                                    <Font name="Rockwell" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+                           <children>
+                              <ImageView fx:id="image3" fitHeight="125.0" fitWidth="220.0" onMouseClicked="#openPanelInformacyjny3" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Zdjecia/tytul7.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="labelTytul3" alignment="CENTER" onMouseClicked="#openPanelInformacyjny3" prefHeight="154.0" prefWidth="220.0" text="Tytuł 3" wrapText="true">
+                                 <font>
+                                    <Font name="Rockwell" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView fx:id="image7" fitHeight="125.0" fitWidth="220.0" onMouseClicked="#openPanelInformacyjny7" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Zdjecia/tytul8.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="labelTytul7" alignment="CENTER" onMouseClicked="#openPanelInformacyjny7" prefHeight="154.0" prefWidth="220.0" text="Tytuł 7" wrapText="true">
+                                 <font>
+                                    <Font name="Rockwell" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView fx:id="image11" fitHeight="125.0" fitWidth="220.0" onMouseClicked="#openPanelInformacyjny11" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Zdjecia/tytul9.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="labelTytul11" alignment="CENTER" onMouseClicked="#openPanelInformacyjny11" prefHeight="154.0" prefWidth="220.0" text="Tytuł 11" wrapText="true">
+                                 <font>
+                                    <Font name="Rockwell" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3">
+                           <children>
+                              <ImageView fx:id="image4" fitHeight="125.0" fitWidth="220.0" onMouseClicked="#openPanelInformacyjny4" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Zdjecia/tytul10.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="labelTytul4" alignment="CENTER" onMouseClicked="#openPanelInformacyjny4" prefHeight="154.0" prefWidth="220.0" text="Tytuł 4" wrapText="true">
+                                 <font>
+                                    <Font name="Rockwell" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView fx:id="image8" fitHeight="125.0" fitWidth="220.0" onMouseClicked="#openPanelInformacyjny8" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Zdjecia/tytul11.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="labelTytul8" alignment="CENTER" onMouseClicked="#openPanelInformacyjny8" prefHeight="154.0" prefWidth="220.0" text="Tytuł 8" wrapText="true">
+                                 <font>
+                                    <Font name="Rockwell" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView fx:id="image12" fitHeight="125.0" fitWidth="220.0" onMouseClicked="#openPanelInformacyjny12" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Zdjecia/tytul12.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="labelTytul12" alignment="CENTER" onMouseClicked="#openPanelInformacyjny12" prefHeight="154.0" prefWidth="220.0" text="Tytuł 12" wrapText="true">
+                                 <font>
+                                    <Font name="Rockwell" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </GridPane>
+               </center>
+            </BorderPane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
